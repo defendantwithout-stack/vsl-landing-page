@@ -32,7 +32,7 @@ const HTML_PAGE = `
         </h1>
 
         <p class="text-lg md:text-xl text-gray-400 text-center mb-10 max-w-2xl">
-            The 'Visual Protocol' that translates your technical complexity into immediate ROI - so you can secure high-ticket contracts without referrals & 'void posting' on LinkedIn
+            The Visual Protocol that translates technical complexity into executive ROI - so you secure high-ticket contracts without referrals or 'hope marketing' on LinkedIn
         </p>
 
         <div class="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative">
@@ -208,6 +208,7 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
