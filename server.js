@@ -38,7 +38,7 @@ const HTML_PAGE = `
         <div class="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative">
             <iframe 
                 class="w-full h-full" 
-                src="https://youtu.be/0jMB81c4zKw" 
+                src="https://www.youtube.com/embed/0jMB81c4zKw?rel=0&modestbranding=1&controls=1" 
                 title="VSL" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -208,6 +208,7 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
