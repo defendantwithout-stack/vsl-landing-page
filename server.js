@@ -17,10 +17,14 @@ const HTML_PAGE = `
     <title>High-Ticket Client Acquisition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-    </style>
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #000; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    
+    /* NEW: Play Button Animation */
+    .play-btn { transition: all 0.3s ease; }
+    .video-container:hover .play-btn { transform: scale(1.1); background-color: #ff0000; }
+</style>
 </head>
 <body class="bg-black text-white font-sans antialiased flex flex-col items-center min-h-screen p-6">
 
@@ -208,6 +212,7 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
