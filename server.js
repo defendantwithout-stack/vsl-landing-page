@@ -176,7 +176,7 @@ app.post('/api/request-pack', async (req, res) => {
             <h1>Hi ${name},</h1>
             <p>I've received your request for the Start Pack.</p>
             <p>Because I customize these protocols for each expert's specific niche, I build them manually. I am reviewing your LinkedIn profile now.</p>
-            <p>Expect to receive your custom asset in your inbox within 24 hours.</p>
+            <p>Expect to receive your custom asset in your inbox within 48 hours.</p>
             <br>
             <p>Best,<br>Savr</p>
         </div>
@@ -187,7 +187,7 @@ app.post('/api/request-pack', async (req, res) => {
     // ⚠️ CHANGE THIS EMAIL BELOW TO YOUR ACTUAL EMAIL ⚠️
     await resend.emails.send({
       from: 'Savr System <send@fctoassets.com>',
-      to: ['YOUR_PERSONAL_EMAIL@gmail.com'], 
+      to: ['save.savr@fctoassets.com'], 
       subject: `🚨 NEW LEAD: ${name}`,
       html: `
         <h1>New Lead Generated</h1>
@@ -208,3 +208,4 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
