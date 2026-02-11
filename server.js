@@ -17,14 +17,14 @@ const HTML_PAGE = `
     <title>High-Ticket Client Acquisition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #000; }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-    
-    /* NEW: Play Button Animation */
-    .play-btn { transition: all 0.3s ease; }
-    .video-container:hover .play-btn { transform: scale(1.1); background-color: #ff0000; }
-</style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        
+        /* Play Button Animation */
+        .play-btn { transition: all 0.3s ease; }
+        .video-container:hover .play-btn { transform: scale(1.1); background-color: #ff0000; }
+    </style>
 </head>
 <body class="bg-black text-white font-sans antialiased flex flex-col items-center min-h-screen p-6">
 
@@ -39,15 +39,25 @@ const HTML_PAGE = `
             The Visual Protocol that translates technical complexity into executive ROI - so you secure high-ticket contracts without referrals or 'hope marketing' on LinkedIn
         </p>
 
-        <div class="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative">
-            <iframe 
-                class="w-full h-full" 
-                src="https://www.youtube.com/embed/0jMB81c4zKw?rel=0&modestbranding=1&controls=1" 
-                title="VSL" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <div id="video-wrapper" class="video-container w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative cursor-pointer group" onclick="playVideo()">
+            
+            <img 
+                src="https://img.youtube.com/vi/0jMB81c4zKw/maxresdefault.jpg" 
+                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300"
+                alt="Video Thumbnail"
+            />
+
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="play-btn w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                    <svg class="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="absolute bottom-6 left-0 w-full text-center">
+                <p class="text-white font-bold text-lg drop-shadow-md">Click to Watch the Protocol</p>
+            </div>
         </div>
 
         <div class="w-full max-w-2xl bg-gray-900/50 p-8 rounded-2xl border border-gray-800 mb-10 backdrop-blur-sm">
@@ -108,12 +118,27 @@ const HTML_PAGE = `
         </div>
         
         <div class="mt-12 mb-6 text-gray-600 text-sm">
-            &copy; save.savr@fctoassets.com. All rights reserved.
+            &copy; 2026 Savr Agency. All rights reserved.
         </div>
 
     </div>
 
     <script>
+        // NEW: Function to swap image for video
+        function playVideo() {
+            const wrapper = document.getElementById('video-wrapper');
+            wrapper.innerHTML = \`
+                <iframe 
+                    class="w-full h-full" 
+                    src="https://www.youtube.com/embed/0jMB81c4zKw?autoplay=1&rel=0&modestbranding=1&controls=1" 
+                    title="VSL" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            \`;
+        }
+
         document.getElementById('optinForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = e.target.querySelector('button');
@@ -188,7 +213,6 @@ app.post('/api/request-pack', async (req, res) => {
     });
 
     // 2. Send Email to YOU (Notification)
-    // ⚠️ CHANGE THIS EMAIL BELOW TO YOUR ACTUAL EMAIL ⚠️
     await resend.emails.send({
       from: 'Savr System <send@fctoassets.com>',
       to: ['save.savr@fctoassets.com'], 
@@ -212,11 +236,3 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-
-
-
-
-
