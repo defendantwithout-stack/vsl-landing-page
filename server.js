@@ -3,19 +3,32 @@ const { Resend } = require('resend');
 const path = require('path');
 const app = express();
 
-// Initialize Resend with your API Key
+// Initialize Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(express.json());
-app.use(express.static('public')); // Serves your HTML file
 
-// The Email Sending Route
+// --- THE FIX ---
+// This tells the server: "Look for the website files right here in the main folder"
+app.use(express.static(__dirname)); 
+app.use(express.static('public')); // Checks public folder too, just in case
+
+// Force the server to show index.html when you visit the home page
+app.get('/', (req, res) => {
+    try {
+        res.sendFile(path.join(__dirname, 'index.html'));
+    } catch (err) {
+        res.send("Error: Could not find index.html. Did you name the file exactly 'index.html'?");
+    }
+});
+// ----------------
+
 app.post('/api/send-pack', async (req, res) => {
   const { email, name } = req.body;
 
   try {
     const data = await resend.emails.send({
-      from: 'Savr <send@fctoassets.com>', // I updated this to match your screenshot settings!
+      from: 'Savr <send@fctoassets.com>',
       to: [email],
       subject: 'Here is your Start Pack',
       html: `
