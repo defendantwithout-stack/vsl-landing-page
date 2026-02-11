@@ -118,7 +118,7 @@ const HTML_PAGE = `
         </div>
         
         <div class="mt-12 mb-6 text-gray-600 text-sm">
-            &copy; 2026 Savr Agency. All rights reserved.
+            &copy; 2026 save.savr@fctoassets.com. All rights reserved.
         </div>
 
     </div>
@@ -236,3 +236,4 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
