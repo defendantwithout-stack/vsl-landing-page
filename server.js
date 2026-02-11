@@ -28,7 +28,7 @@ const HTML_PAGE = `
 
         <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             Stop Relying on Referrals. <br class="hidden md:block" />
-            Acquire High-Ticket Clients on Demand.
+            Acquire High-Ticket Clients on Demand
         </h1>
 
         <p class="text-lg md:text-xl text-gray-400 text-center mb-10 max-w-2xl">
@@ -104,7 +104,7 @@ const HTML_PAGE = `
         </div>
         
         <div class="mt-12 mb-6 text-gray-600 text-sm">
-            &copy; 2026 Savr Agency. All rights reserved.
+            &copy; Save.savr@fctoassets.com. All rights reserved.
         </div>
 
     </div>
@@ -208,4 +208,5 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
