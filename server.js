@@ -38,7 +38,7 @@ const HTML_PAGE = `
         <div class="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative">
             <iframe 
                 class="w-full h-full" 
-                src="https://www.youtube.com/embed/Oo4xEB5S2TM?rel=0&modestbranding=1&showinfo=0&controls=1" 
+                src="https://youtu.be/0jMB81c4zKw" 
                 title="VSL" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -176,7 +176,7 @@ app.post('/api/request-pack', async (req, res) => {
             <h1>Hi ${name},</h1>
             <p>I've received your request for the Start Pack.</p>
             <p>Because I customize these protocols for each expert's specific niche, I build them manually. I am reviewing your LinkedIn profile now.</p>
-            <p>Expect to receive your custom asset in your inbox within 48 hours.</p>
+            <p>Expect to receive your custom asset in your inbox within 72 hours.</p>
             <br>
             <p>Best,<br>Savr</p>
         </div>
@@ -208,5 +208,6 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
