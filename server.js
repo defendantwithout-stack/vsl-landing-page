@@ -27,12 +27,12 @@ const HTML_PAGE = `
     <div class="w-full max-w-4xl flex flex-col items-center mt-10">
 
         <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            Stop Relying on Referrals. <br class="hidden md:block" />
-            Acquire High-Ticket Clients on Demand
+            ATTENTION: <br class="hidden md:block" />
+            FRACTIONAL CTOs, CIOs & ENTERPRISE ARCHITECTS
         </h1>
 
         <p class="text-lg md:text-xl text-gray-400 text-center mb-10 max-w-2xl">
-            The exact visual framework for Fractional Experts to bypass HR filters and go straight to the decision-makers.
+            The 'Visual Protocol' that translates your technical complexity into immediate ROI - so you can secure high-ticket contracts without referrals & 'void posting' on LinkedIn
         </p>
 
         <div class="w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative">
@@ -65,7 +65,7 @@ const HTML_PAGE = `
                 </li>
                  <li class="flex items-start">
                     <span class="text-green-400 mr-3 text-xl">✅</span>
-                    <span class="text-gray-300"><strong class="text-white">The 100x Asset:</strong> One video that powers your entire content strategy.</span>
+                    <span class="text-gray-300"><strong class="text-white">The 100x 'Anchor' Asset:</strong> Fuel your entire strategy, driving all traffic back to a single, high-converting argument.</span>
                 </li>
             </ul>
         </div>
@@ -104,7 +104,7 @@ const HTML_PAGE = `
         </div>
         
         <div class="mt-12 mb-6 text-gray-600 text-sm">
-            &copy; Save.savr@fctoassets.com. All rights reserved.
+            &copy; save.savr@fctoassets.com. All rights reserved.
         </div>
 
     </div>
@@ -208,6 +208,7 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
