@@ -53,7 +53,7 @@ const HTML_PAGE = `
             <ul class="space-y-4">
                 <li class="flex items-start">
                     <span class="text-green-400 mr-3 text-xl">✅</span>
-                    <span class="text-gray-300"><strong class="text-white">Positions you as a Problem Solver:</strong> Stop being treated like a generic candidate.</span>
+                    <span class="text-gray-300"><strong class="text-white">Bypass the HR Filter:</strong> Stop being treated like a generic candidate. Position yourself as a strategic problem solver to go straight to executive decision-makers.</span>
                 </li>
                 <li class="flex items-start">
                     <span class="text-green-400 mr-3 text-xl">✅</span>
@@ -208,6 +208,7 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 
 
