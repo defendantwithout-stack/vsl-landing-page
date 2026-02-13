@@ -28,7 +28,7 @@ const HTML_PAGE = `
 </head>
 <body class="bg-black text-white font-sans antialiased flex flex-col items-center min-h-screen p-6">
 
-    <div class="w-full max-w-4xl flex flex-col items-center mt-10">
+    <div class="w-full max-w-5xl flex flex-col items-center mt-10">
 
         <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-6 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
             ATTENTION: <br class="hidden md:block" />
@@ -39,7 +39,7 @@ const HTML_PAGE = `
             The Visual Protocol that translates technical complexity into executive ROI - so you secure high-ticket contracts without referrals or 'hope marketing' on LinkedIn
         </p>
 
-        <div id="video-wrapper" class="video-container w-full aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative cursor-pointer group" onclick="playVideo()">
+        <div id="video-wrapper" class="video-container w-full max-w-4xl aspect-video bg-gray-900 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(255,255,255,0.1)] mb-10 border border-gray-800 relative cursor-pointer group" onclick="playVideo()">
             
             <img 
                 src="https://img.youtube.com/vi/0jMB81c4zKw/maxresdefault.jpg" 
@@ -84,8 +84,39 @@ const HTML_PAGE = `
             </ul>
         </div>
 
-        <div class="w-full max-w-md bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-2xl flex flex-col items-center">
+        <h3 class="text-2xl font-bold text-white mb-6 text-center mt-6">What Experts Say</h3>
+        <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 flex flex-col items-center text-center hover:border-gray-600 transition duration-300">
+                <div class="w-16 h-16 rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-gray-600">
+                    <img src="https://i.postimg.cc/6q8Lp92j/image.png" alt="Mikhail" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold text-lg leading-tight">Mikhail Gribov</h4>
+                <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Founder/CEO @ organicsales.io</p>
+                <p class="text-gray-300 text-sm italic">"Savr is just phenomenal at editing... if you look for someone to push your videos to another level, this is the guy."</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 flex flex-col items-center text-center hover:border-gray-600 transition duration-300">
+                <div class="w-16 h-16 rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-gray-600">
+                    <img src="https://i.postimg.cc/yYfvKbJD/Screenshot-2026-02-13-125634.png" alt="Aleksandar" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold text-lg leading-tight">Aleksandar Tosic</h4>
+                <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">Co-founder/COO @ terminly.io</p>
+                <p class="text-gray-300 text-sm italic">"Working with Savr for over two years has been a thrilling collaboration. It feels more like a partnership."</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800 flex flex-col items-center text-center hover:border-gray-600 transition duration-300">
+                <div class="w-16 h-16 rounded-full bg-gray-700 mb-4 overflow-hidden border-2 border-gray-600">
+                    <img src="https://i.postimg.cc/C5CD1zM6/image.png" alt="David" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold text-lg leading-tight">David Saad</h4>
+                <p class="text-gray-500 text-xs uppercase tracking-wider mb-3">President @ Skyjems</p>
+                <p class="text-gray-300 text-sm italic">"You are SO GOOD at what you do."</p>
+            </div>
+        </div>
+
+        <div class="w-full max-w-md bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-2xl flex flex-col items-center">
+        
             <p class="text-white font-medium text-center mb-4">
                 Say 'YES' to Free Start Pack:
             </p>
@@ -236,6 +267,3 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
