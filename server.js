@@ -144,7 +144,7 @@ const HTML_PAGE = `
             </div>
 
             <a href="https://calendar.app.google/TnCvtMJDXzcZsz339" target="_blank" class="w-full text-center block px-4 py-3 border border-gray-600 rounded-lg text-gray-300 hover:text-white hover:border-white transition duration-200">
-                Book a Strategy Call
+                Book a Clarity Call
             </a>
         </div>
         
@@ -267,4 +267,5 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
