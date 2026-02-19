@@ -118,7 +118,7 @@ const HTML_PAGE = `
         <div class="w-full max-w-md bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-2xl flex flex-col items-center">
         
             <p class="text-white font-medium text-center mb-4">
-                Say 'YES' to Free Start Pack:
+                Claim your free personalized pack:
             </p>
             <form id="optinForm" class="w-full space-y-3">
                 
@@ -267,3 +267,4 @@ app.post('/api/request-pack', async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
